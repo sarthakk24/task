@@ -5,25 +5,107 @@ import Schedule from "dashboard/components/home/schedule";
 import HorizontalBar from "dashboard/components/shared/horizontalBar";
 import VerticalBar from "dashboard/components/shared/verticalBar";
 
-const SignIn = () => {
+const data = {
+  revenue: "2,129,430",
+  transaction: "1,520",
+  likes: "9,721",
+  users: "892",
+  tenure: "May - June 2021",
+  products: [
+    { name: "Basic Tees", value: 55 },
+    { name: "Custom Short pants", value: 31 },
+    { name: "Super Hoodies", value: 14 },
+  ],
+  schedule: [
+    {
+      task: "Meeting with suppliers from Kuta Bali",
+      time: "14.00-15.00",
+      location: "Sunset Road, Kuta, Bali ",
+    },
+    {
+      task: "Check operation at Giga Factory 1",
+      time: "18.00-20.00",
+      location: "Central Jakarta ",
+    },
+  ],
+  customers: ["Guests", "Users"],
+  metrics: [
+    {
+      name: "",
+      uv: 200,
+      pv: 100,
+    },
+    {
+      name: "Week 1",
+      uv: 390,
+      pv: 520,
+    },
+    {
+      name: "Week 2",
+      uv: 220,
+      pv: 150,
+    },
+    {
+      name: "Week 3",
+      uv: 300,
+      pv: 450,
+    },
+    {
+      name: "Week E",
+      uv: 210,
+      pv: 190,
+    },
+    {
+      name: "",
+      uv: 450,
+      pv: 300,
+    },
+  ],
+};
+
+const Dashboard = () => {
   return (
-    <div className="h-screen flex p-10 justify-between">
+    <div className="md:h-screen flex p-5 md:p-10 justify-between">
       <VerticalBar />
-      <div className="flex flex-col w-3/4 h-full justify-around">
+      <div className="flex flex-col w-3/4 h-full justify-evenly">
         <HorizontalBar />
-        <div className="flex w-full justify-between h-[12%]">
-          <Cards className="bg-[#DDEFE0]" />
-          <Cards className="bg-[#F4ECDD]" />
-          <Cards className="bg-[#EFDADA]" />
-          <Cards className="bg-[#DEE0EF]" />
+        <div className="flex w-full justify-between h-[12%] flex-wrap">
+          <Cards
+            className="bg-[#DDEFE0]"
+            value={`$${data.revenue}`}
+            title="Total Revenues"
+            type="revenue"
+          />
+          <Cards
+            className="bg-[#F4ECDD]"
+            value={data.transaction}
+            title="Total Transactions"
+            type="transaction"
+          />
+          <Cards
+            className="bg-[#EFDADA]"
+            value={data.likes}
+            title="Total Likes"
+            type="likes"
+          />
+          <Cards
+            className="bg-[#DEE0EF]"
+            value={data.users}
+            title="Total Users"
+            type="users"
+          />
         </div>
-        <Graph />
+        <Graph
+          metrics={data.metrics}
+          tenure={data.tenure}
+          customers={data.customers}
+        />
         <div className="flex w-full h-1/4 justify-between">
-          <Products /> <Schedule />
+          <Products data={data.products} /> <Schedule />
         </div>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default Dashboard;
