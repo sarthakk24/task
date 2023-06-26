@@ -101,7 +101,7 @@ const Dashboard = () => {
           customers={data.customers}
         />
         <div className="flex w-full h-3/5 lg:h-1/4 justify-between flex-col lg:flex-row">
-          <Products data={data.products} /> <Schedule />
+          <Products data={data.products} /> <Schedule data={data.schedule} />
         </div>
       </div>
     </div>

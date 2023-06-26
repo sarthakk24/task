@@ -29,3 +29,10 @@ export interface productProps {
 export interface inputProps {
   type: "email" | "password";
 }
+
+export interface scheduleProps {
+  task: string;
+  time: string;
+  location: string;
+  item?: number;
+}
