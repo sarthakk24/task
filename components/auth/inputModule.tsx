@@ -7,9 +7,12 @@ const InputModule = () => {
         <InputField type="email" />
         <InputField type="password" />
         <button className="self-start text-[#346BD4]">Forgot Password ?</button>
-        <button className="bg-black text-white font-bold py-2 w-full rounded-[10px]">
+        <a
+          href="/dashboard"
+          className="text-center bg-black text-white font-bold py-2 w-full rounded-[10px]"
+        >
           Sign In
-        </button>
+        </a>
       </div>
 
       <div className="text-center pt-5">

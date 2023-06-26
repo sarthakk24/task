@@ -8,6 +8,7 @@ export interface cardProps {
 export interface navProps {
   logo: string;
   value: string;
+  type: string;
 }
 
 export interface graphProps {

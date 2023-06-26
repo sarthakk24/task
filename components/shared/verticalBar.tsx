@@ -25,7 +25,7 @@ const VerticalBar = () => {
           }`}
         >
           {navEl.map((el) => (
-            <NavElement logo={el.logo} value={el.value} />
+            <NavElement logo={el.logo} value={el.value} type={el.type} />
           ))}
         </div>
       </div>
