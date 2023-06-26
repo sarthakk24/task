@@ -4,9 +4,9 @@ import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
 const Graph = ({ className, metrics, tenure, customers }: graphProps) => {
   return (
     <div
-      className={`h-[35%] bg-white rounded-[20px] flex flex-col justify-between items-center ${className} p-8`}
+      className={`h-1/2 lg:h-[35%] bg-white rounded-[20px] flex flex-col justify-between items-center ${className} p-2 sm:p-8 sm:m-5 lg:m-0 gap-5 md:gap-0`}
     >
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between flex-col sm:flex-row:">
         <div className="flex flex-col">
           <span className="text-xl xl:text-xl font-bold">Activities</span>
           <span className="text-xl xl:text-lg font-light">{tenure}</span>

@@ -25,3 +25,7 @@ export interface productProps {
   name: string;
   value: number;
 }
+
+export interface inputProps {
+  type: "email" | "password";
+}

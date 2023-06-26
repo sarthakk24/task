@@ -6,11 +6,11 @@ const Cards = ({ className, title, value, type }: cardProps) => {
 
   return (
     <div
-      className={`w-[22%] min-w-[250px] md:min-w-0 h-full rounded-[20px] flex flex-col justify-center px-8 ${className}`}
+      className={`w-[22%] min-w-[250px] md:min-w-0 h-full rounded-[20px] flex flex-col justify-center m-2 md:m-0 px-4 xl:px-8 ${className}`}
     >
       <div className="self-end ">logo</div>
       <p className=" text-xs">{title}</p>
-      <p className=" text-2xl font-bold">{value}</p>
+      <p className=" text-base lg:text-xl xl:text-2xl font-bold">{value}</p>
     </div>
   );
 };

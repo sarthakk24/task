@@ -65,11 +65,11 @@ const data = {
 
 const Dashboard = () => {
   return (
-    <div className="md:h-screen flex p-5 md:p-10 justify-between">
+    <div className=" lg:h-screen flex lg:p-10 flex-col lg:flex-row justify-between">
       <VerticalBar />
-      <div className="flex flex-col w-3/4 h-full justify-evenly">
+      <div className="flex flex-col w-full lg:w-3/4 h-full justify-evenly p-2 sm:p-5 lg:p-0 ">
         <HorizontalBar />
-        <div className="flex w-full justify-between h-[12%] flex-wrap">
+        <div className="flex lg:w-full justify-evenly md:justify-between md:h-[12%] flex-wrap m-5 lg:m-0">
           <Cards
             className="bg-[#DDEFE0]"
             value={`$${data.revenue}`}
@@ -100,7 +100,7 @@ const Dashboard = () => {
           tenure={data.tenure}
           customers={data.customers}
         />
-        <div className="flex w-full h-1/4 justify-between">
+        <div className="flex w-full h-3/5 lg:h-1/4 justify-between flex-col lg:flex-row">
           <Products data={data.products} /> <Schedule />
         </div>
       </div>
